@@ -1,2 +1,4 @@
-# jenkins-pipeline-examples
-Example pipelines (Declarative and Scripted) for Jenins
+# Jenkins Pipeline Examples
+
+Example pipelines (Declarative and Scripted) for Jenkins (http://jenkins.io).
+
