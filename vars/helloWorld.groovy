@@ -1,6 +1,8 @@
 // vars/helloWorld.groovy
+// Basic Hello World Shared Library Example
+// Shamelessly stolen from:
+// https://github.com/beedemo/workflowLibs/blob/master/vars/helloWorld.groovy
 def call(name) {
-    // you can call any valid step functions from your code, just like you can from Pipeline scripts
-    echo "Hello ${name}"
-    echo "Have a great day!"
+   echo "Hello ${name}"
+   echo "Have a great day!"
 }
