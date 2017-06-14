@@ -1,0 +1,12 @@
+library 'CraigsLibs'
+
+pipeline {
+    agent any
+    stages {
+        stage('Example') {
+            steps {
+                helloWorld("Craig")
+            }
+        }
+    }
+}
