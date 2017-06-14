@@ -1,4 +1,4 @@
-// Jenkinsfile-SharedLibrary
+// Jenkinsfile-SimpleSharedLibrary
 // ----------------------------------------------------------------------
 // Simple Jenkinsfile example showing how to call a shared library
 // Important Note: The shared library is found in the var directory
