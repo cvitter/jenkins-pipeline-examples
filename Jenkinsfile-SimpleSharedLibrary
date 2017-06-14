@@ -4,7 +4,7 @@
 // Important Note: The shared library is found in the var directory
 //    in this repo and Jenkins needs to be configured to use the
 //    library prior to executing this pipeline (see instructions
-//    in the repo's readme
+//    in the repo's readme)
 // ----------------------------------------------------------------------
 
 // Library this Jenkinsfile uses - configured in Manage Jenkins/Configure System
