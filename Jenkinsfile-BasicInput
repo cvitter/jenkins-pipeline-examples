@@ -1,0 +1,14 @@
+// Jenkinsfile-BasicInput
+// ----------------------------------------------------------------------
+// Basic Input step - asks user: Should I Deploy? Proceed or Abort
+// ----------------------------------------------------------------------
+pipeline {
+   agent any
+   stages {
+      stage('Deploy') {
+         steps {
+            input 'Should I Deploy?'
+         }
+      }
+   }
+}
