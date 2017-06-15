@@ -1,13 +1,14 @@
 // Jenkinsfile
 // ----------------------------------------------------------------------
-// This is as simple as it gets with declarative pipeline
+// This example runs the pipeline in a docker container based on
+// Alpine Linux with Open JDK 8
 // ----------------------------------------------------------------------
 pipeline {
-   agent any
+   agent { docker 'openjdk:8-jdk-alpine' }
    stages {
       stage('Say Hello') {
          steps {
-            echo 'Hello World!'
+            sh 'java -version'
          }
       }
    }
