@@ -12,6 +12,13 @@ pipeline {
    }
     
    stages {
+      //
+      stage("Output Variables") {
+         steps {
+            echo "Branch: ${branch}"
+         }
+      }
+      
       // 
       stage("BASIC WHEN") {
          when {
