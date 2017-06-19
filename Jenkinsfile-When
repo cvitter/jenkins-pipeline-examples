@@ -24,7 +24,7 @@ pipeline {
       }
       
       // Expression based when example with AND
-      stage('WHEN EXPRESSION with OR') {
+      stage('WHEN EXPRESSION with AND') {
          when {
             expression {
                VALUE_ONE == '1' && VALUE_THREE == '3'
