@@ -31,7 +31,7 @@ pipeline {
             }
          }
          steps {
-            echo 'WHEN EXPRESSION Works!'
+            echo 'WHEN with AND expression works!'
          }
       }
       
@@ -43,7 +43,7 @@ pipeline {
             }
          }
          steps {
-            echo 'WHEN EXPRESSION Works!'
+            echo 'WHEN with OR expression works!'
          }
       }
       
