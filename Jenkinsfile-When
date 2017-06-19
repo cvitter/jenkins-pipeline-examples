@@ -15,7 +15,7 @@ pipeline {
       //
       stage("Output Variables") {
          steps {
-            echo "Branch: ${branch}"
+            echo "Branch: ${env.BRANCH_NAME}"
          }
       }
       
