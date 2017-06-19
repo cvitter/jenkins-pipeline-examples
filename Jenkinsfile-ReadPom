@@ -1,3 +1,8 @@
+// Jenkinsfile-ReadPom
+// ----------------------------------------------------------------------
+// This example reads the version value from pom.xml and uses it to set
+// the value of an environment variable
+// ----------------------------------------------------------------------
 pipeline {
    agent any
     

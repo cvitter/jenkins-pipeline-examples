@@ -1,0 +1,50 @@
+// Jenkinsfile-When
+// ----------------------------------------------------------------------
+// This example shows a variety of ways to use 'when' for flow control
+// ----------------------------------------------------------------------
+pipeline {
+   agent any
+    
+   environment {
+      VALUE_ONE = '1'
+      VALUE_TWO = '2'
+      VALUE_THREE = '3'
+   }
+    
+   stages {
+      // 
+      stage("BASIC WHEN") {
+          when {
+              branch 'master'
+          }
+          steps {
+              echo 'BASIC WHEN - Master Branch!'
+          }
+      }
+      
+      //
+      stage('WHEN EXPRESSION') {
+          when {
+              expression {
+                  VALUE_ONE == '1' || VALUE_THREE == '3'
+              }
+          }
+          steps {
+              echo 'WHEN EXPRESSION Works!'
+          }
+      }
+      
+      // 
+      stage("AllOf") {
+        when {
+            allOf {
+                environment name:'VALUE_ONE', value: '1'
+                environment name:'VALUE_TWO', value: '2'
+            }
+        }
+        steps {
+            echo "AllOf Works!!"
+        }
+      }
+   }
+}
