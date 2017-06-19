@@ -23,11 +23,23 @@ pipeline {
          }
       }
       
-      // Expression based when example
-      stage('WHEN EXPRESSION') {
+      // Expression based when example with AND
+      stage('WHEN EXPRESSION with OR') {
          when {
             expression {
-               VALUE_ONE == '1' || VALUE_THREE == '3'
+               VALUE_ONE == '1' && VALUE_THREE == '3'
+            }
+         }
+         steps {
+            echo 'WHEN EXPRESSION Works!'
+         }
+      }
+      
+      // Expression based when example
+      stage('WHEN EXPRESSION with OR') {
+         when {
+            expression {
+               VALUE_ONE == '1' || VALUE_THREE == '2'
             }
          }
          steps {
