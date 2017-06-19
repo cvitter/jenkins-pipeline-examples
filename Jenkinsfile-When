@@ -14,24 +14,24 @@ pipeline {
    stages {
       // 
       stage("BASIC WHEN") {
-          when {
-              branch 'master'
-          }
-          steps {
-              echo 'BASIC WHEN - Master Branch!'
-          }
+         when {
+		    branch 'master'
+		 }
+         steps {
+            echo 'BASIC WHEN - Master Branch!'
+         }
       }
       
       //
       stage('WHEN EXPRESSION') {
-          when {
-              expression {
-                  VALUE_ONE == '1' || VALUE_THREE == '3'
-              }
-          }
-          steps {
-              echo 'WHEN EXPRESSION Works!'
-          }
+         when {
+            expression {
+               VALUE_ONE == '1' || VALUE_THREE == '3'
+            }
+         }
+         steps {
+            echo 'WHEN EXPRESSION Works!'
+         }
       }
       
       // 
