@@ -35,7 +35,7 @@ pipeline {
          }
       }
       
-      // 
+      // When - AllOf Example
       stage("AllOf") {
         when {
             allOf {
@@ -48,7 +48,7 @@ pipeline {
         }
       }
       
-      //
+      // When - Not AllOf Example
       stage("Not AnyOf") {
          when {
             not {
