@@ -12,15 +12,9 @@ pipeline {
    }
     
    stages {
-      //
-      stage("Output Variables") {
-         steps {
-            echo "Branch: ${env.BRANCH_NAME}"
-         }
-      }
       
-      // 
-      stage("BASIC WHEN") {
+      // Execute when branch = 'master'
+      stage("BASIC WHEN - Branch") {
          when {
 		    branch 'master'
 		 }
@@ -29,7 +23,7 @@ pipeline {
          }
       }
       
-      //
+      // Expression based when example
       stage('WHEN EXPRESSION') {
          when {
             expression {
@@ -52,6 +46,21 @@ pipeline {
         steps {
             echo "AllOf Works!!"
         }
+      }
+      
+      //
+      stage("Not AnyOf") {
+         when {
+            not {
+               anyOf {
+                  branch "development"
+                  environment name:'VALUE_TWO', value: '4'
+               }
+            }
+         }
+         steps {
+            echo "Not AnyOf - Works!"
+         }
       }
    }
 }
