@@ -63,7 +63,7 @@ pipeline {
         }
       }
       
-      // When - Not AllOf Example
+      // When - Not AnyOf Example
       stage("Not AnyOf") {
          when {
             not {
