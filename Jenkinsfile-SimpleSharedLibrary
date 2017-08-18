@@ -16,7 +16,7 @@ pipeline {
       stage('Example') {
          steps {
          	// Call the getChangeset function
-         	getChangeset()
+         	githubChangeset()
          	
             // Call the helloWorld() method and pass a value
             helloWorld("Craig")
