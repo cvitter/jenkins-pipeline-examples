@@ -3,7 +3,7 @@
 // in the following format via echo:
 //    - Commit message [author]
 
-def call {
+def call() {
 	def changeString = ""
  	def changeLogSets = currentBuild.changeSets
  	
