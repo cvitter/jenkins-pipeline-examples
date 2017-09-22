@@ -1,0 +1,29 @@
+pipeline {
+	stages {
+		stage("Build") {
+			steps {
+				sh 'mvn -v'
+			}
+		}
+		
+		stage("Testing") {
+			stages {
+				stage("Unit Tests") {
+					echo "Unit Tests!"
+				}
+				stage("Functional Tests") {
+					echo "Functional Tests!"
+				}
+				stage("Integration Tests") {
+					echo "Integration Tests!"
+				}
+			}
+		}
+		
+		stage("Deploy") {
+			steps {
+				echo "Deplopy!"
+			}
+		}
+	}
+}
