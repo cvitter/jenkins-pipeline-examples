@@ -11,13 +11,19 @@ pipeline {
 		stage("Testing") {
 			parallel {
 				stage("Unit Tests") {
-					echo "Unit Tests!"
+					steps {
+						echo "Unit Tests!"
+					}
 				}
 				stage("Functional Tests") {
-					echo "Functional Tests!"
+					steps {
+						echo "Functional Tests!"
+					}
 				}
 				stage("Integration Tests") {
-					echo "Integration Tests!"
+					steps {
+						echo "Integration Tests!"
+					}
 				}
 			}
 		}
