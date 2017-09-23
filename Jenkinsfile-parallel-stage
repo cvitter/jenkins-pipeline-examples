@@ -9,7 +9,7 @@ pipeline {
 		}
 		
 		stage("Testing") {
-			stages {
+			parallel {
 				stage("Unit Tests") {
 					echo "Unit Tests!"
 				}
