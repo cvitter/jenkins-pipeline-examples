@@ -1,9 +1,9 @@
 pipeline {
-	agent any
 	
 	stages {
 		stage("Build") {
 			steps {
+				agent any
 				sh 'mvn -v'
 			}
 		}
@@ -17,11 +17,13 @@ pipeline {
 					}
 				}
 				stage("Functional Tests") {
+					agent any
 					steps {
 						echo "Functional Tests!"
 					}
 				}
 				stage("Integration Tests") {
+					agent any
 					steps {
 						echo "Integration Tests!"
 					}
@@ -30,6 +32,7 @@ pipeline {
 		}
 		
 		stage("Deploy") {
+			agent any
 			steps {
 				echo "Deploy!"
 			}
