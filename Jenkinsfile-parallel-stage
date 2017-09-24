@@ -11,6 +11,7 @@ pipeline {
 		stage("Testing") {
 			parallel {
 				stage("Unit Tests") {
+					agent { docker 'openjdk:8-jdk-alpine' }
 					steps {
 						echo "Unit Tests!"
 					}
@@ -30,7 +31,7 @@ pipeline {
 		
 		stage("Deploy") {
 			steps {
-				echo "Deplopy!"
+				echo "Deploy!"
 			}
 		}
 	}
