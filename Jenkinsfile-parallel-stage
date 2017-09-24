@@ -23,7 +23,6 @@ pipeline {
 					}
 				}
 				stage("Integration Tests") {
-					agent { docker 'openjdk:9-jdk-alpine' }
 					steps {
 						sh 'java -version'
 					}
