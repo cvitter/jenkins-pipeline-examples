@@ -1,0 +1,25 @@
+pipeline {
+    agent any
+    stages{
+        stage('comiple'){
+            steps{
+                echo "this is to check the comilation"
+                sh "mvn compile"
+            }
+                
+        }
+        stage('test'){
+            steps{
+                echo "this to test the comiled code"
+                sh "mvn test"
+            }
+        }
+        stage('package'){
+            steps{
+                echo "this is the phase to create the jar/war/ear file"
+                sh "mvn package"
+            }
+            
+        }
+    }
+}
