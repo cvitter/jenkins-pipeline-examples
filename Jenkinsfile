@@ -5,21 +5,10 @@
 pipeline {
    agent any
    stages {
-      stage('compile') {
+      stage('Say Hello') {
          steps {
-            sh "mvn comiple"
-         }
-      }
-        stage('test') {
-         steps {
-            sh "mvn test"
-         }
-      }
-        stage('install') {
-         steps {
-            sh "mvn istall"
+            echo 'Hello World!'
          }
       }
    }
-  
 }
