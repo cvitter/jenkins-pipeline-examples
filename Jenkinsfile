@@ -5,7 +5,7 @@
 pipeline {
    agent any
    environment{
-   /home/ec2-user/apache-maven-3.8.6/bin
+    PATH=/home/ec2-user/apache-maven-3.8.6/bin:$PATH
    }
     stages {
       stage('Say Hello') {
