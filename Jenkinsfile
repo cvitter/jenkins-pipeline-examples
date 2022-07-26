@@ -13,10 +13,6 @@ pipeline {
             echo 'Hello World!'
          }
       }
-      stage('build') {
-         steps {
-            sh "mvn test"
-         }
-      } 
+     
    }
 }
